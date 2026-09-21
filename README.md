@@ -1,8 +1,11 @@
-# DotNet2Fox
-
+# DotNet2Fox - NT
 **Simplify calling Visual FoxPro code from .NET via COM interop.**
 
 DotNet2Fox is an open-source library that simplifies calling Visual FoxPro code from .NET desktop and web applications. Have you tried your hand at COM interop only to be met with limitation after limitation? Did you find that exposing your existing FoxPro code over COM would require a major refactoring effort? DotNet2Fox provides a simplified interface for calling into existing real-world FoxPro code, and without all those limitations.
+
+## New Technolgy (NT)
+- FoxCOM.exe built in Visual FoxPro Advance 10.00.000.2301
+- DotNet2Fox.dll in NET 10
 
 ## Presentation
 
