@@ -4,8 +4,9 @@
 DotNet2Fox is an open-source library that simplifies calling Visual FoxPro code from .NET desktop and web applications. Have you tried your hand at COM interop only to be met with limitation after limitation? Did you find that exposing your existing FoxPro code over COM would require a major refactoring effort? DotNet2Fox provides a simplified interface for calling into existing real-world FoxPro code, and without all those limitations.
 
 ## New Technolgy (NT)
-- FoxCOM.exe built in Visual FoxPro Advance 10.00.000.2301
+- FoxCOM.exe built in Visual FoxPro Advance 10.00.0000.2301
 - DotNet2Fox.dll in NET 10
+- NuGet Version 26.1.0
 
 ## Presentation
 
@@ -25,9 +26,9 @@ Here are the system requirements for using and deploying DotNet2Fox:
 - Visual FoxPro 9.0 SP2
   - VFP and the VFP runtimes must be properly installed and registered on the development machine for DotNet2Fox to function.
   - SP2 can be found here: [VFP 9 Service Pack 2 (SP2) and Hotfix 3](https://github.com/VFPX/VFP9SP2Hotfix3)
+- Visual FoxPro Advance 32 bits version 10.00+
 - Supported versions of .NET:
-  - .NET Framework 4.6 – 4.8
-  - .NET 5.0+
+  - .NET 10.0+
   - **Not supported**: .NET Core 1.x – 3.x. These versions do not contain complete COM interop support that DotNet2Fox requires. For more info, see [COM Interop with .NET Core 3.x and .NET 5.0](http://www.joelleach.net/2020/11/17/com-interop-with-net-core-3-x-and-net-5-0/).
 - Languages supported:
   - C#
