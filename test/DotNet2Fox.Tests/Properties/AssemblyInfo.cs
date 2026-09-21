@@ -1,6 +1,7 @@
 ﻿using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using System.Runtime.Versioning;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
@@ -18,6 +19,9 @@ using System.Runtime.InteropServices;
 // to COM components.  If you need to access a type in this assembly from 
 // COM, set the ComVisible attribute to true on that type.
 [assembly: ComVisible(false)]
+
+// Estas pruebas requieren Windows porque ejercitan Visual FoxPro mediante COM.
+[assembly: SupportedOSPlatform("windows")]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 [assembly: Guid("a71746c1-21fc-41f3-a001-715449ecade5")]
