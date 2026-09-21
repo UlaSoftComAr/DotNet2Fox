@@ -8,6 +8,32 @@
 FOXUSER.DBF
 FOXUSER.FPT
 
+# Ignorar Binarios de Formularios
+*.[Ss][Cc][Xx]
+*.[Ss][Cc][Tt]
+
+# Ignorar Binarios de Reportes y Labels
+*.[Ff][Rr][Xx]
+*.[Ff][Rr][Tt]
+*.[Ll][Bb][Xx]
+*.[Ll][Bb][Tt]
+
+# Ignorar Binarios de Menus
+*.[Mm][Nn][Xx]
+*.[Mm][Nn][Tt]
+
+# Ignorar Binarios de Tablas
+*.[Dd][Bb][Ff]
+*.[Cc][Dd][Xx]
+*.[Ff][Pp][Tt]
+*.[Ii][Dd][Xx]
+
+# Ignorar Binarios de BaseDeDatos
+*.[Dd][Bb][Cc]
+*.[Dd][Cc][Xx]
+*.[Dd][Cc][Tt]
+*.[Ii][Rr][Tt]
+
 # User-specific files
 *.suo
 *.user
