@@ -16,10 +16,6 @@ FOXUSER.FPT
 *.[Ss][Cc][Xx]
 *.[Ss][Cc][Tt]
 
-# Ignorar Binarios de Clases
-*.[Vv][Cc][Xx]
-*.[Vv][Cc][Tt]
-
 # Ignorar Binarios de Reportes y Labels
 *.[Ff][Rr][Xx]
 *.[Ff][Rr][Tt]
