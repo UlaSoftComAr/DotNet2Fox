@@ -3,7 +3,6 @@ using System;
 using System.Threading.Tasks;
 using System.IO;
 using System.Diagnostics;
-using System.Reflection;
 using System.Threading;
 
 namespace DotNet2Fox.Tests
@@ -12,8 +11,13 @@ namespace DotNet2Fox.Tests
     public class FoxTests
     {
 
-        // Location of FoxPro code to execute
-        string foxCodePath = Directory.GetParent(Directory.GetParent(Directory.GetCurrentDirectory()).ToString()).ToString() + "/FoxCode";
+        // Ubicación estable del código FoxPro copiado al directorio de salida.
+        readonly string foxCodePath = Path.Combine(AppContext.BaseDirectory
+                                                 , "FoxCode");
+
+        // Ubicación del servidor COM sin registro copiado con las pruebas.
+        readonly string rutaFoxCom = Path.Combine(AppContext.BaseDirectory
+                                                , "foxcom.exe");
 
         [TestMethod()]
         public void DoCmdTest()
@@ -76,8 +80,8 @@ namespace DotNet2Fox.Tests
             {
                 process.Kill();
             }
-            string foxCOMEXE = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\FoxCOM.exe";             
-            using (Fox fox = new Fox("FoxTests", null, 60, false, regFreeFoxCOMPath: foxCOMEXE))
+            using (Fox fox = new Fox("FoxTests", null, 60, false
+                                   , regFreeFoxCOMPath: rutaFoxCom))
             {
                 fox.StartRequest("FoxTests");
                 var result = fox.Eval("1+1");
@@ -96,8 +100,8 @@ namespace DotNet2Fox.Tests
             {
                 process.Kill();
             }
-            string foxCOMEXE = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\FoxCOM.exe";
-            using (Fox fox = new Fox("FoxTests", null, 60, false, regFreeFoxCOMPath: foxCOMEXE))
+            using (Fox fox = new Fox("FoxTests", null, 60, false
+                                   , regFreeFoxCOMPath: rutaFoxCom))
             {
                 fox.StartRequest("FoxTests");
                 var result = await fox.EvalAsync("1+1");
@@ -355,7 +359,7 @@ namespace DotNet2Fox.Tests
                 }
                 catch (Exception e)
                 {
-                    Assert.AreEqual(e.Message, "Fox Test Error");
+                    Assert.AreEqual("Fox Test Error", e.Message);
                 }
             }
         }
@@ -373,7 +377,7 @@ namespace DotNet2Fox.Tests
                 }
                 catch (Exception e)
                 {
-                    Assert.AreEqual(e.Message, "Fox Test Error");
+                    Assert.AreEqual("Fox Test Error", e.Message);
                 }
             }
         }
@@ -392,7 +396,7 @@ namespace DotNet2Fox.Tests
                 }
                 catch (Exception e)
                 {
-                    Assert.AreEqual(e.Message, "Fox Test Error");
+                    Assert.AreEqual("Fox Test Error", e.Message);
                 }
             }
         }
@@ -411,7 +415,7 @@ namespace DotNet2Fox.Tests
                 }
                 catch (Exception e)
                 {
-                    Assert.AreEqual(e.Message, "Fox Test Error");
+                    Assert.AreEqual("Fox Test Error", e.Message);
                 }
             }
         }
