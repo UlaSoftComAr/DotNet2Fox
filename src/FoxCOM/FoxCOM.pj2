@@ -36,7 +36,7 @@ _LibraryName = 'C:\VSS\UlaSoftComAr\DotNet2Fox\src\FoxCOM\foxcom.exe'
 _InternalName = 'foxcom'
 _ProjectName = 'FoxCOM'
 _TypeLibDesc = 'FoxCOMType Library'
-_ServerType = '  -1'
+_ServerType = '  69'
 _TypeLib = '{A06C56E6-4DD2-4CD5-90A6-B0DD8C63C0E9}'
 *</ServerHead>
 *<ServerData>
@@ -52,7 +52,7 @@ _Interface = '{51029A02-D7B3-428E-B4FF-DBAA60329647}'
 *</ServerData>
 
 *<BuildProj>
-*<.HomeDir = 'd:\appsweb\nexus-aspnet-core\dotnet2fox\src\foxcom' />
+*<.HomeDir = 'c:\vss\ulasoftcomar\dotnet2fox\src\foxcom' />
 
 FOR EACH loProject IN _VFP.Projects FOXOBJECT
 	loProject.Close()
@@ -87,6 +87,8 @@ ENDWITH
 
 WITH loProject
 	*<ProjectProperties>
+	.SetMain(lcCurdir + 'foxcom.prg')
+
 	.Debug = .F.
 	.Encrypted = .T.
 	*<.CmntStyle = 1 />

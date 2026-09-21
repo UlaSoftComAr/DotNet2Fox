@@ -8,10 +8,6 @@
 FOXUSER.DBF
 FOXUSER.FPT
 
-# Ignorar Binarios de proyectos
-*.[Pp][Jj][Xx]
-*.[Pp][Jj][Tt]
-
 # Ignorar Binarios de Formularios
 *.[Ss][Cc][Xx]
 *.[Ss][Cc][Tt]
